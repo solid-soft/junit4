@@ -3,6 +3,7 @@ install: mvn clean verify
 jdk:
   - oraclejdk8
   - openjdk7
-script:
-   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
-   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis/run_on_non_pull_requests; fi'
+  
+cache:
+directories:
+- $HOME/ .m2
